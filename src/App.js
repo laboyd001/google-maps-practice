@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import Map from './components/Map.js'
+import GoogleMaps from "simple-react-google-maps"
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+       <GoogleMaps
+        apiKey = {"AIzaSyBoPPKuvvE0W8dwOfm87Qd3m2RxZTwmHmo"}
+        style={{height: "400px", width: "100%"}}
+        zoom={10}
+        center={{lat: 36.184568, lng: -86.647630}}
+        markers={
+          [
+          {lat: 36.203893, lng: -86.677757}
+          ]
+        }
+       />
     );
   }
 }
 
 export default App;
+
+ 
